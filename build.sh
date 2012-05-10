@@ -1,7 +1,7 @@
 VERSION=1.5.21
 PREFIX='/app/local'
 MAILDIR='/app/Mail'
-CONFIGURE="./configure --enable-imap --prefix=$PREFIX --with-mailpath=$MAILDIR"
+CONFIGURE="./configure --enable-imap --prefix=$PREFIX --with-mailpath=$MAILDIR --enable-smtp --with-ssl"
 
 curl "ftp://ftp.mutt.org/mutt/devel/mutt-$VERSION.tar.gz" >mutt.tar.gz
 tar xzf mutt.tar.gz
