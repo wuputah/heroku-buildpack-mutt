@@ -2,6 +2,6 @@
 
 cat <<EOF
 ---
-default_process_types:
-  mutt: mutt/bin/mutt
+config_vars:
+  PATH:/app/local/bin:/usr/bin:/bin
 EOF
