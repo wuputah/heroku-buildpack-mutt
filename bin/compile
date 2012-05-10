@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+mkdir $BUILD_DIR/mutt
+mv $ROOT_DIR/mutt.tgz $BUILD_DIR/mutt
+tar -x -z -C $BUILD_DIR/mutt -f $BUILD_DIR/mutt/mutt.tgz
+rm $BUILD_DIR/mutt/mutt.tgz
+
+mkdir $BUILD_DIR/Mail
